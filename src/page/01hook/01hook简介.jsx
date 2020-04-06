@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect, useCallback, useMemo } from 'react';
+import { Button } from 'antd'
 export default (props)=> {
   const [count, setcount] = useState(0);
 
@@ -15,11 +16,11 @@ export default (props)=> {
     <div>
       <h3>hook简介</h3>
       <p>you clicked {count} times</p>
-      <button onClick={()=>{
+      <Button type='primary' onClick={()=>{
         setcount(count+1)
       }}>
         click me 
-      </button>
+      </Button>
     </div>
   )
 }

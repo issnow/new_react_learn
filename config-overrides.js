@@ -1,4 +1,4 @@
-const { override, overrideDevServer, addLessLoader, addPostcssPlugins, fixBabelImports } = require('customize-cra');
+const { override, overrideDevServer, addLessLoader, addPostcssPlugins, fixBabelImports,addDecoratorsLegacy  } = require('customize-cra');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 // 打包配置
 const addCustomize = () => config => {
@@ -37,6 +37,7 @@ const devServerConfig = () => config => {
 }
 module.exports = {
   webpack: override(
+    addDecoratorsLegacy(),
     fixBabelImports('import', {
       libraryName: 'antd',
       libraryDirectory: 'es',

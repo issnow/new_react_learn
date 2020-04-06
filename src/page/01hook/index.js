@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM,{render} from 'react-dom'
 import { BrowserRouter as Router, Route, Switch, Link,NavLink } from 'react-router-dom'
-import App from './02useEffect';
+import App from './07useState';
 import Home from './01hook简介';
 import FriendStatus from './05gameOrTravel';
 import './style/index.less';
